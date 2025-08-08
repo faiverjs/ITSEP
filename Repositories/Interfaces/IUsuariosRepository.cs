@@ -6,6 +6,8 @@ namespace ITSEP.Repositories.Interfaces
     public interface IUsuariosRepository : IRepository<Usuario>
     {
         // GETs personalizados
+
+        Task<List<Usuario>> GetAllUsuarios();
         Task<Usuario> GetUsuariosbyIdentification(long UserIdentification);
         Task<Usuario> GetUsuarios(Guid id);
 

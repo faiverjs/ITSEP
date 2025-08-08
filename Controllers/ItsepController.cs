@@ -41,6 +41,19 @@ namespace ITSEP.Controllers
         {
             return await UsuariosServices.GetUsuarioIdentification(UserIdentification);
         }
+        [HttpGet("Usuarios-all")]
+        public async Task<ActionResult<List<Usuario>>> GetAllUsuarios()
+        {
+            var usuarios = await UsuariosRepository.GetAllUsuarios();
+
+            if (usuarios == null || !usuarios.Any())
+            {
+                return NotFound("No se encontraron usuarios.");
+            }
+
+            return Ok(usuarios);
+        }
+
 
         [HttpGet("UsuariosById")]
         public async Task<Usuario> GetUsuarioById([FromQuery] Guid id)

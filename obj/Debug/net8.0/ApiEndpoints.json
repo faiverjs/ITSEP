@@ -313,6 +313,26 @@
   },
   {
     "ContainingType": "ITSEP.Controllers.ItsepController",
+    "Method": "GetAllUsuarios",
+    "RelativePath": "api/Itsep/Usuarios-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ITSEP.Models.Usuario, ITSEP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ITSEP.Controllers.ItsepController",
     "Method": "GetUsuarioById",
     "RelativePath": "api/Itsep/UsuariosById",
     "HttpMethod": "GET",

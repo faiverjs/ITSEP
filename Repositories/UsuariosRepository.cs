@@ -1,6 +1,7 @@
 ﻿using ITSEP.DependyInjection;
 using ITSEP.Models;
 using ITSEP.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace ITSEP.Repositories
 {
@@ -76,5 +77,13 @@ namespace ITSEP.Repositories
 
             return true;
         }
+
+        public async Task<List<Usuario>> GetAllUsuarios()
+        {
+        var result = await (from db in context.Set<Usuario>()
+                            select db).ToListAsync();
+        return result;
+        }
+
     }
 }
