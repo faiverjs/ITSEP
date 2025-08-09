@@ -1,3 +1,12 @@
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.csproj.AssemblyReference.cache
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.GeneratedMSBuildEditorConfig.editorconfig
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.AssemblyInfoInputs.cache
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.AssemblyInfo.cs
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.csproj.CoreCompileInputs.cache
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.MvcApplicationPartsAssemblyInfo.cache
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.RazorAssemblyInfo.cache
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.RazorAssemblyInfo.cs
+F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.sourcelink.json
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\appsettings.Development.json
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\appsettings.json
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\ITSEP.staticwebassets.runtime.json
@@ -7,6 +16,8 @@ F:\Logica de programacion\ITSEP\bin\Debug\net8.0\ITSEP.deps.json
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\ITSEP.runtimeconfig.json
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\ITSEP.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\ITSEP.pdb
+F:\Logica de programacion\ITSEP\bin\Debug\net8.0\AutoMapper.dll
+F:\Logica de programacion\ITSEP\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Azure.Core.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Azure.Identity.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Humanizer.dll
@@ -45,6 +56,7 @@ F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Mono.TextTemplating.dll
+F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Newtonsoft.Json.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\RestSharp.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\System.ClientModel.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\System.CodeDom.dll
@@ -144,14 +156,6 @@ F:\Logica de programacion\ITSEP\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 F:\Logica de programacion\ITSEP\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.csproj.AssemblyReference.cache
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.GeneratedMSBuildEditorConfig.editorconfig
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.AssemblyInfoInputs.cache
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.AssemblyInfo.cs
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.csproj.CoreCompileInputs.cache
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.MvcApplicationPartsAssemblyInfo.cache
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.RazorAssemblyInfo.cache
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.RazorAssemblyInfo.cs
 F:\Logica de programacion\ITSEP\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 F:\Logica de programacion\ITSEP\obj\Debug\net8.0\scopedcss\bundle\ITSEP.styles.css
 F:\Logica de programacion\ITSEP\obj\Debug\net8.0\scopedcss\projectbundle\ITSEP.bundle.scp.css
@@ -171,7 +175,3 @@ F:\Logica de programacion\ITSEP\obj\Debug\net8.0\refint\ITSEP.dll
 F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.pdb
 F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.genruntimeconfig.cache
 F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ref\ITSEP.dll
-F:\Logica de programacion\ITSEP\bin\Debug\net8.0\AutoMapper.dll
-F:\Logica de programacion\ITSEP\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-F:\Logica de programacion\ITSEP\bin\Debug\net8.0\Newtonsoft.Json.dll
-F:\Logica de programacion\ITSEP\obj\Debug\net8.0\ITSEP.sourcelink.json

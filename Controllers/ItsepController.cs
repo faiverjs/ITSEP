@@ -67,11 +67,15 @@ namespace ITSEP.Controllers
             return await UsuariosServices.PostUsuarios(usuario);
         }
 
+        
+       
+
         [HttpPut("Usuarios")]
-        public async Task<Usuario> PutUsuarios([FromBody] Usuario usuario)
+        public async Task<IActionResult> EditarUsuarios([FromBody] Usuario usuario)
         {
-            return await UsuariosServices.PutUsuarios(usuario);
+            return await UsuariosServices.EditarUsuarios(usuario);
         }
+
 
         [HttpDelete("Usuarios")]
         public async Task<bool> DeleteUsuarios([FromQuery] Guid id)
@@ -95,11 +99,8 @@ namespace ITSEP.Controllers
             return await EnviosServices.PostEnvios(envios);
         }
 
-        [HttpPut("Envios")]
-        public async Task<Envios> PutEnvios([FromBody] Envios envios)
-        {
-            return await EnviosServices.PutEnvios(envios);
-        }
+
+
 
         [HttpDelete("Envios")]
         public async Task<bool> DeleteEnvios([FromQuery] Guid id)

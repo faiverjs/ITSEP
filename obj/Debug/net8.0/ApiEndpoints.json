@@ -157,32 +157,6 @@
   },
   {
     "ContainingType": "ITSEP.Controllers.ItsepController",
-    "Method": "PutEnvios",
-    "RelativePath": "api/Itsep/Envios",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "envios",
-        "Type": "ITSEP.Models.Envios",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ITSEP.Models.Envios",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ITSEP.Controllers.ItsepController",
     "Method": "DeleteEnvios",
     "RelativePath": "api/Itsep/Envios",
     "HttpMethod": "DELETE",
@@ -261,7 +235,7 @@
   },
   {
     "ContainingType": "ITSEP.Controllers.ItsepController",
-    "Method": "PutUsuarios",
+    "Method": "EditarUsuarios",
     "RelativePath": "api/Itsep/Usuarios",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -273,17 +247,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ITSEP.Models.Usuario",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ITSEP.Controllers.ItsepController",

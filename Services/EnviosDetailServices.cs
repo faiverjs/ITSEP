@@ -1,6 +1,7 @@
 ﻿using ITSEP.Models;
 using ITSEP.Repositories.Interfaces;
 using ITSEP.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ITSEP.Services
 {
@@ -13,6 +14,8 @@ namespace ITSEP.Services
         {
             this.enviosDetailRepository = enviosDetailRepository;
         }
+
+        public Task<IActionResult> EditarUsuarios => throw new NotImplementedException();
 
         public async Task<bool> DeleteEnviosDetails(Guid id)
         {

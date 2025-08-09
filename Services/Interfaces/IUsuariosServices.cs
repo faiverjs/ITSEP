@@ -10,6 +10,7 @@ namespace ITSEP.Services.Interfaces
         Task<Usuario> PostUsuarios(Usuario usuario);     // ← Devuelve el usuario creado
         Task<Usuario> PutUsuarios(Usuario usuario);      // ← Devuelve el usuario actualizado
         Task<bool> DeleteUsuarios(Guid id);              // ← true si se eliminó, false si no existe
+        Task<IActionResult> EditarUsuarios(Usuario usuario);
     }
 
 }

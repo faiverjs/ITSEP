@@ -1,6 +1,10 @@
 ﻿using ITSEP.Models;
+using ITSEP.Repositories;
 using ITSEP.Repositories.Interfaces;
 using ITSEP.Services.Interfaces;
+using ITSEP.Types;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
@@ -38,6 +42,25 @@ namespace ITSEP.Services
         public async Task<bool> DeleteUsuarios(Guid id)
         {
             return await usuariosRepository.DeleteUsuario(id);
+        }
+
+        public async Task<IActionResult> EditarUsuarios(Usuario usuario)
+        {
+            Usuario  user = await usuariosRepository.GetUsuarios((Guid) usuario.Id);
+            if (user == null) throw new ArgumentException("Usuario no encontrado");
+            user.UserTypeDocument = usuario.UserTypeDocument;
+            user.UserIdentification = usuario.UserIdentification;
+            user.UserNames = usuario.UserNames;
+            user.UserEmail = usuario.UserEmail;
+            user.UserPhone = usuario.UserPhone;
+            user.UserLogin = usuario.UserLogin;
+            user.UserPassword = usuario.UserPassword;
+            user.UserStatus = usuario.UserStatus;
+            user.UserSso = usuario.UserSso;
+            user.UserSsoId = usuario.UserSsoId;
+
+            await usuariosRepository.Update(user);
+            return await Task.FromResult(new OkObjectResult(new { Status = TypeStatus.SUCCESS.ToString() }));
         }
     }
 }
