@@ -183,6 +183,42 @@
   },
   {
     "ContainingType": "ITSEP.Controllers.ItsepController",
+    "Method": "Login",
+    "RelativePath": "api/Itsep/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credenciales",
+        "Type": "ITSEP.Models.DTO.Credenciales",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITSEP.Controllers.ItsepController",
+    "Method": "Get",
+    "RelativePath": "api/Itsep/post",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ITSEP.Models.DTO.PostDto, ITSEP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ITSEP.Controllers.ItsepController",
     "Method": "GetUsuariosByIdentificacion",
     "RelativePath": "api/Itsep/Usuarios",
     "HttpMethod": "GET",

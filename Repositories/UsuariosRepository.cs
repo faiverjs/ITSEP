@@ -85,5 +85,11 @@ namespace ITSEP.Repositories
         return result;
         }
 
+        public async Task<Usuario> GetByIdentificationAsync(long identification)
+        {
+            return await context.Set<Usuario>()
+                                .FirstOrDefaultAsync(u => u.UserIdentification == identification);
+        }
+
     }
 }

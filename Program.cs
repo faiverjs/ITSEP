@@ -1,5 +1,7 @@
 ﻿using ITSEP.DependyInjection;
 using ITSEP.Models;
+using ITSEP.Services;
+using ITSEP.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -13,6 +15,10 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DataBaseConnecti
 
 builder.Services.AddHttpContextAccessor(); // ⬅️ Esto es obligatorio si usas IHttpContextAccessor
 
+builder.Services.AddHttpClient<IPostServices, PostServices>( c =>
+{
+    c.BaseAddress = new Uri(builder.Configuration["BaseUrlPost"]); 
+});
 Repository.Inject(builder.Services);
 var app = builder.Build();
 
