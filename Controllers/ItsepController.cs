@@ -1,5 +1,8 @@
 ﻿using ITSEP.Models;
+using ITSEP.Models.DTO;
+using ITSEP.Repositories;
 using ITSEP.Repositories.Interfaces;
+using ITSEP.Services;
 using ITSEP.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +19,7 @@ namespace ITSEP.Controllers
         private readonly IEnviosRepository EnviosRepository;
         private readonly IEnviosDetailServices EnviosDetailServices;
         private readonly IEnviosDetailRepository enviosDetailRepository;
+        private readonly IPostServices postServices;
 
         public ItsepController(ItsepDbContext ItsepDbContext,
                                IUsuariosServices usuariosServices,
@@ -23,7 +27,8 @@ namespace ITSEP.Controllers
                                IEnviosServices enviosServices,
                                IEnviosRepository enviosRepository,
                                IEnviosDetailServices enviosDetailServices,
-                               IEnviosDetailRepository enviosDetailRepository )
+                               IEnviosDetailRepository enviosDetailRepository,
+                               IPostServices postServices)
         {
             this.ItsepDbContext = ItsepDbContext;
             this.UsuariosServices = usuariosServices;
@@ -32,9 +37,22 @@ namespace ITSEP.Controllers
             this.EnviosRepository = enviosRepository;
             this.EnviosDetailServices = enviosDetailServices;
             this.enviosDetailRepository = enviosDetailRepository;
+            this.postServices = postServices;
         }
 
         // ====================== Controladores Usuarios ======================
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] Credenciales credenciales)
+        {
+            var valido = await UsuariosServices.ValidarCredenciales( credenciales );
+
+            if (!valido)
+                return Unauthorized(new { message = "Credenciales inválidas" });
+
+            return Ok(new { message = "Acceso permitido" });
+        }
+
 
         [HttpGet("Usuarios")]
         public async Task<Usuario> GetUsuariosByIdentificacion([FromQuery] long UserIdentification)
@@ -133,6 +151,13 @@ namespace ITSEP.Controllers
         {
             return await EnviosDetailServices.DeleteEnviosDetails(id);
         }
+
+
+        // ====================== Controladores post y dtos ======================
+
+        [HttpGet("post")]
+        public async Task<IEnumerable<PostDto>> Get() => 
+            await postServices.Get();
 
     }
 }

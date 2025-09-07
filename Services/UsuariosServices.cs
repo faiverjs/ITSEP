@@ -1,4 +1,5 @@
 ﻿using ITSEP.Models;
+using ITSEP.Models.DTO;
 using ITSEP.Repositories;
 using ITSEP.Repositories.Interfaces;
 using ITSEP.Services.Interfaces;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ITSEP.Services
 {
@@ -29,9 +31,25 @@ namespace ITSEP.Services
             return await usuariosRepository.GetUsuariosbyIdentification(userIdentification);
         }
 
-        public async Task<Usuario> PostUsuarios(Usuario usuario)
+        public async Task<IActionResult> PostUsuarios(Usuario usuario)
         {
-            return await usuariosRepository.AddUsuario(usuario);
+            Usuario user = await usuariosRepository.GetByIdentificationAsync(usuario.UserIdentification);
+            if (user != null) throw new ArgumentException();
+            user = new Usuario();
+            {
+                user.UserTypeDocument = usuario.UserTypeDocument;
+                user.UserIdentification = usuario.UserIdentification;
+                user.UserNames = usuario.UserNames;
+                user.UserEmail = usuario.UserEmail;
+                user.UserPhone = usuario.UserPhone;
+                user.UserLogin = usuario.UserLogin;
+                user.UserPassword = usuario.UserPassword;
+                user.UserStatus = usuario.UserStatus;
+                user.UserSso = usuario.UserSso;
+                user.UserSsoId = usuario.UserSsoId;
+            }
+
+            return new OkObjectResult(new { Status = TypeStatus.SUCCESS.ToString() });
         }
 
         public async Task<Usuario> PutUsuarios(Usuario usuario)
@@ -61,6 +79,17 @@ namespace ITSEP.Services
 
             await usuariosRepository.Update(user);
             return await Task.FromResult(new OkObjectResult(new { Status = TypeStatus.SUCCESS.ToString() }));
+        }
+
+        public async Task<bool> ValidarCredenciales(Credenciales credenciales)
+        {
+            var usuario = await usuariosRepository.GetByIdentificationAsync(credenciales.UserIdentification);
+
+            if (usuario == null)
+                return false;
+
+            // Aquí comparas el password
+            return usuario.UserPassword == credenciales.UserPassword;
         }
     }
 }

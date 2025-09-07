@@ -1,4 +1,5 @@
 ﻿using ITSEP.Models;
+using ITSEP.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ITSEP.Services.Interfaces
@@ -11,6 +12,7 @@ namespace ITSEP.Services.Interfaces
         Task<Usuario> PutUsuarios(Usuario usuario);      // ← Devuelve el usuario actualizado
         Task<bool> DeleteUsuarios(Guid id);              // ← true si se eliminó, false si no existe
         Task<IActionResult> EditarUsuarios(Usuario usuario);
+        Task<bool> ValidarCredenciales(Credenciales credenciales);
     }
 
 }

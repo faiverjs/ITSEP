@@ -15,6 +15,7 @@ namespace ITSEP.DependyInjection
             services.AddScoped<IEnviosServices, EnviosServices>();
             services.AddScoped<IEnviosDetailRepository, EnviosDetailRepository>();
             services.AddScoped<IEnviosDetailServices, EnviosDetailServices>();
+            services.AddScoped<IPostServices, PostServices>();
         }
 
 

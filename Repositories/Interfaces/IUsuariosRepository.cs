@@ -19,6 +19,8 @@ namespace ITSEP.Repositories.Interfaces
 
         // DELETE
         Task<bool> DeleteUsuario(Guid id);
+        Task<Usuario> GetByIdentificationAsync(long identification);
+
     }
 }
 
