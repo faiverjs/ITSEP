@@ -51,7 +51,7 @@ namespace ITSEP.Services
 
             return new OkObjectResult(new { Status = TypeStatus.SUCCESS.ToString() });
         }
-
+       
         public async Task<Usuario> PutUsuarios(Usuario usuario)
         {
             return await usuariosRepository.UpdateUsuario(usuario);
